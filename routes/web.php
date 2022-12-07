@@ -26,3 +26,33 @@ Auth::routes();
 Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', function() {
+    return view('home');
+})->name('home')->middleware('auth');
+
+Route::get('/home/pasien', function (){
+    return view ('pasien');
+})->name('home')->middleware('auth');
+
+Route::get('/home/DataPenunjang', function (){
+    return view ('penunjang');
+})->name('home')->middleware('auth');
+
+Route::get('/home/pemeriksaanPasien', function (){
+    return view ('pemeriksaan');
+})->name('home')->middleware('auth');
+
+Route::get('/home/rawatinap', function (){
+    return view ('rawatinap');
+})->name('home')->middleware('auth');
+
+Route::get('/home/ruangan', function (){
+    return view ('ruangan');
+})->name('home')->middleware('auth');
+
+Route::get('/home/dokter', function (){
+    return view ('dokter');
+})->name('home')->middleware('auth');
