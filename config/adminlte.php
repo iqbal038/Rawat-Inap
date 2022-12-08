@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Rawat IhNap',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Rumah Sakit Vol2</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -299,22 +299,13 @@ return [
             'url'         => 'home/pasien',
             'icon' => 'fas fa-fw fa-hospital-user',
         ],
-        [   'text'         => 'Data Penunjang',
-            'url'         => 'home/DataPenunjang',
+        [   'text'         => 'Spesialis',
+            'url'         => 'home/spesialis',
             'icon' => 'fas fa-fw fa-heart',
         ],
-        [   'text'         => 'Pemeriksaan',
-            'url'         => 'home/pemeriksaanPasien',
-            'icon' => 'fas fa-fw fa-stethoscope',
-
-        ],
-        [   'text'         => 'Rawat Inap',
-            'url'         => 'home/rawatinap',
+        [   'text'         => 'Kamar',
+            'url'         => 'home/kamar',
             'icon' => 'fas fa-fw fa-bed',
-        ],
-        [   'text'         => 'Ruangan',
-            'url'         => 'home/ruangan',
-            'icon' => 'fas fa-fw fa-hospital',
         ],
         [   'text'         => 'Dokter',
             'url'         => 'home/dokter',
@@ -333,54 +324,26 @@ return [
             'can'  => 'manage-blog',
         ],
 
-        ['header' => 'account_settings'],
+        ['header' => 'DATA TRANSAKSI'],
         [
-            'text' => 'profile',
+            'text' => 'Pendaftaran',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-address-card',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Hasil Periksa',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-clipboard-check',
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
+            'text' => 'Rawat',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-bed',
+        ],
+        [
+            'text' => 'Pembayaran',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-credit-card',
         ],
     ],
 

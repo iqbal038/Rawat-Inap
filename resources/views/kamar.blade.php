@@ -3,13 +3,13 @@
 @section('title', 'Home Page')
 
 @section('content_header')
-<h1 class="m-0 text-dark">Data Dokter</h1>
+<h1 class="m-0 text-dark">Data Kamar</h1>
 @stop   
 
 @section('content')
 <div class="container-fluid">
     <div class="card card-default">
-    <div class="card-body">
+        <div class="card-body">
             <button class="btn btn-primary" data-toggle="modal" data-target="#tambahBukuModal">
                 <i class="fa fa-plus">  Tambah Data</i>
             </button>
@@ -20,7 +20,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class= "modal-title" id="exampleModalLabel">Tambah Data Dokter</5>
+                                    <h5 class= "modal-title" id="exampleModalLabel">Tambah Data Kamar</5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -29,30 +29,29 @@
                                     <form method="post" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
-                                        <label for="penulis">Nama Dokter</label>
+                                        <label for="penulis">Nama Kamar</label>
                                             <input type="text"class="form-control" name="penulis" id="penulis" required/>
                                         </div>
                                         <div class="form-group">
-                                        <label for="penulis">Spesialis</label>
+                                        <label for="penulis">No Kamar</label>
+                                            <input type="text"class="form-control" name="penulis" id="penulis" required/>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="tahun">Kode Kamar</label>
                                         <select name="province" class="form-control">
-                                        <option value="">== Pilih ID ==</option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
+                                        <option value="">== Pilih Kelas ==</option>
+                                        <option value="">Kelas I</option>
+                                        <option value="">Kelas II</option>
+                                        <option value="">Kelas III</option>
+                                        <option value="">VIP</option>
                                         </select></div>
                                         <div class="form-group">
-                                        <label for="tahun">Jam Praktek</label>
-                                            <input type="year"class="form-control" name="tahun" id="tahun" required/>
-                                        </div>
-                                        <div class="form-group">
-                                        <label for="penerbit">Jenis Kelamin</label>
-                                        <label class="mb-0 mr-3">
-                                        <input type="radio" class="mr-1" name="gender"> Laki - Laki
-                                        </label>
-                                        <label class="mb-0 mr-3">
-                                        <input type="radio" class="mr-1" name="gender"> Perempuan
-                                        </label>
-                                        </div>
+                                        <label for="tahun">Status</label>
+                                        <select name="province" class="form-control">
+                                        <option value="">== Pilih Status ==</option>
+                                        <option value="">Sudah Terisi</option>
+                                        <option value="">Kosong</option>
+                                        </select></div>
                                     </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -69,18 +68,16 @@
                 <thead>
                     <tr class="text-center">
                         <th>NO</th>
-                        <th>ID</th>
-                        <th>Nama Dokter</th>
-                        <th>ID Spesialis</th>
-                        <th>Jam Praktek</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Spesialis</th>
+                        <th>ID Kamar</th>
+                        <th>Nama Kamar</th>
+                        <th>No Kamar</th>
+                        <th>Kelas Kamar</th>
+                        <th>Status Kamar</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                            <td></td> 
                             <td></td> 
                             <td></td> 
                             <td></td> 

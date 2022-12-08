@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -37,20 +37,12 @@ Route::get('/home/pasien', function (){
     return view ('pasien');
 })->name('home')->middleware('auth');
 
-Route::get('/home/DataPenunjang', function (){
-    return view ('penunjang');
+Route::get('/home/spesialis', function (){
+    return view ('spesialis');
 })->name('home')->middleware('auth');
 
-Route::get('/home/pemeriksaanPasien', function (){
-    return view ('pemeriksaan');
-})->name('home')->middleware('auth');
-
-Route::get('/home/rawatinap', function (){
-    return view ('rawatinap');
-})->name('home')->middleware('auth');
-
-Route::get('/home/ruangan', function (){
-    return view ('ruangan');
+Route::get('/home/kamar', function (){
+    return view ('kamar');
 })->name('home')->middleware('auth');
 
 Route::get('/home/dokter', function (){

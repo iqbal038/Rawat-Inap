@@ -3,7 +3,7 @@
 @section('title', 'Home Page')
 
 @section('content_header')
-<h1 class="m-0 text-dark">Data Dokter</h1>
+<h1 class="m-0 text-dark">Data spesialis</h1>
 @stop   
 
 @section('content')
@@ -20,7 +20,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class= "modal-title" id="exampleModalLabel">Tambah Data Dokter</5>
+                                    <h5 class= "modal-title" id="exampleModalLabel">Tambah Data Pasien </5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -29,31 +29,10 @@
                                     <form method="post" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
-                                        <label for="penulis">Nama Dokter</label>
+                                        <label for="penulis">Nama Spesialis</label>
                                             <input type="text"class="form-control" name="penulis" id="penulis" required/>
                                         </div>
-                                        <div class="form-group">
-                                        <label for="penulis">Spesialis</label>
-                                        <select name="province" class="form-control">
-                                        <option value="">== Pilih ID ==</option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        </select></div>
-                                        <div class="form-group">
-                                        <label for="tahun">Jam Praktek</label>
-                                            <input type="year"class="form-control" name="tahun" id="tahun" required/>
-                                        </div>
-                                        <div class="form-group">
-                                        <label for="penerbit">Jenis Kelamin</label>
-                                        <label class="mb-0 mr-3">
-                                        <input type="radio" class="mr-1" name="gender"> Laki - Laki
-                                        </label>
-                                        <label class="mb-0 mr-3">
-                                        <input type="radio" class="mr-1" name="gender"> Perempuan
-                                        </label>
-                                        </div>
-                                    </div>
+                                </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
                                     <button type="submit" class="btn btn-primary">Kirim</button>
@@ -69,21 +48,13 @@
                 <thead>
                     <tr class="text-center">
                         <th>NO</th>
-                        <th>ID</th>
-                        <th>Nama Dokter</th>
-                        <th>ID Spesialis</th>
-                        <th>Jam Praktek</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Spesialis</th>
+                        <th>Id Spesialis</th>
+                        <th>Nama Spesialis</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                            <td></td> 
-                            <td></td> 
-                            <td></td> 
-                            <td></td> 
                             <td></td> 
                             <td></td> 
                             <td></td> 
