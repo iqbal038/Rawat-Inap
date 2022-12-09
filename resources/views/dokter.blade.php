@@ -45,14 +45,13 @@
                                             <input type="year"class="form-control" name="tahun" id="tahun" required/>
                                         </div>
                                         <div class="form-group">
-                                        <label for="penerbit">Jenis Kelamin</label>
-                                        <label class="mb-0 mr-3">
-                                        <input type="radio" class="mr-1" name="gender"> Laki - Laki
-                                        </label>
-                                        <label class="mb-0 mr-3">
-                                        <input type="radio" class="mr-1" name="gender"> Perempuan
-                                        </label>
-                                        </div>
+                                            <label for="tahun">Jenis Kelamin</label>
+                                                    <select name="province" class="form-control">
+                                                        <option value="">Pilih Jenis Kelamin....</option>
+                                                        <option value="">Laki - Laki</option>
+                                                        <option value="">Perempuan</option>
+                                                    </select>
+                                            </div> 
                                     </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -74,7 +73,6 @@
                         <th>ID Spesialis</th>
                         <th>Jam Praktek</th>
                         <th>Jenis Kelamin</th>
-                        <th>Spesialis</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -82,8 +80,7 @@
                     <tr>
                             <td></td> 
                             <td></td> 
-                            <td></td> 
-                            <td></td> 
+                            <td></td>  
                             <td></td> 
                             <td></td> 
                             <td></td> 
@@ -118,30 +115,30 @@
                     @method ('PATCH')
                     <div class="row"> 
                         <div class="col-md-6"> 
-                            <div class="form-group"> 
-                                <label for="edit-judul">Judul Buku</label> 
-                                <input type="text" class="form-control" id="edit-judul" name="judul" required/>
-                            </div> 
-                            <div class="form-group">
-                                <label for="edit-penulis">Penulis</label> 
-                                <input type="text" class="form-control" name="penulis" id="edit-penulis" required/> 
-                            </div> 
-                            <div class="form-group"> 
-                                <label for="edit-tahun">Tahun</label> 
-                                <input type="year" class="form-control" name="tahun" id="edit-tahun" required/> 
-                            </div> 
-                            <div class="form-group"> 
-                                <label for="edit-penerbit">Penerbit</label> 
-                                <input type="text" class="form-control" name="penerbit" id="edit-penerbit" required/> 
-                            </div> 
-                        </div> 
-                        <div class="col-and-6"> 
-                            <div class="form-group" id="image-area"></div> 
-                            <div class="form-group"> 
-                                <label for="edit-cover">Cover</label> 
-                                <input type="file" class="form-control" name="cover" id="edit-cover"/> 
-                            </div> 
-                        </div> 
+                        <div class="form-group">
+                                        <label for="penulis">Nama Dokter</label>
+                                            <input type="text"class="form-control" name="penulis" id="penulis" required/>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="penulis">Spesialis</label>
+                                        <select name="province" class="form-control">
+                                        <option value="">== Pilih ID ==</option>
+                                        <option value="">A</option>
+                                        <option value="">B</option>
+                                        <option value="">C</option>
+                                        </select></div>
+                                        <div class="form-group">
+                                        <label for="tahun">Jam Praktek</label>
+                                            <input type="year"class="form-control" name="tahun" id="tahun" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="tahun">Daftar Pasien</label>
+                                                    <select name="province" class="form-control">
+                                                        <option value="">Pilih Jenis Kelamin....</option>
+                                                        <option value="">Laki - Laki</option>
+                                                        <option value="">Perempuan</option>
+                                                    </select>
+                                        </div> 
                     </div> 
                 </div> 
                 <div class="modal-footer"> 

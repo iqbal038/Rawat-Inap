@@ -327,22 +327,28 @@ return [
         ['header' => 'DATA TRANSAKSI'],
         [
             'text' => 'Pendaftaran',
-            'url'  => 'admin/settings',
+            'url'  => 'home/pendaftaran',
             'icon' => 'fas fa-fw fa-address-card',
         ],
         [
             'text' => 'Hasil Periksa',
-            'url'  => 'admin/settings',
+            'url'  => 'home/periksa',
             'icon' => 'fas fa-fw fa-clipboard-check',
         ],
         [
             'text' => 'Rawat',
-            'url'  => 'admin/settings',
+            'url'  => 'home/rawat',
             'icon' => 'fas fa-fw fa-bed',
         ],
         [
             'text' => 'Pembayaran',
-            'url'  => 'admin/settings',
+            'url'  => 'home/pembayaran',
+            'icon' => 'fas fa-fw fa-credit-card',
+        ],
+        ['header' => 'DATA LAPORAN '],
+        [
+            'text' => 'Laporan Data Master',
+            'url'  => 'home/laporan',
             'icon' => 'fas fa-fw fa-credit-card',
         ],
     ],

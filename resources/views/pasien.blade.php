@@ -41,30 +41,25 @@
                                             <input type="date"class="form-control" name="tahun" id="tahun" required/>
                                         </div>
                                         <div class="form-group">
+                                            <label for="penulis">Alamat</label>
+                                            <textarea type="text" class="form-control" name="description" ></textarea>
+                                        </div>
+                                        <div class="form-group">
                                         <label for="penulis">No Telp Pasien</label>
                                             <input type="text"class="form-control" name="penulis" id="penulis" required/>
                                         </div>
                                         <div class="form-group">
-                                        <label for="penulis">Alamat</label>
-                                            <input type="text"class="form-control" name="penulis" id="penulis" required/>
+                                            <label for="tahun">Jenis Kelamin</label>
+                                                    <select name="province" class="form-control">
+                                                        <option value="">Pilih Jenis Kelamin....</option>
+                                                        <option value="">Laki - Laki</option>
+                                                        <option value="">Perempuan</option>
+                                                    </select>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                        <label for="penerbit">Jenis Kelamin</label>
-                                        <label class="mb-0 mr-3">
-                                        <input type="radio" class="mr-1" name="gender"> Laki - Laki
-                                        </label>
-                                        <label class="mb-0 mr-3">
-                                        <input type="radio" class="mr-1" name="gender"> Perempuan
-                                        </label>
-                                        </div>
-                                        <div class="form-group">
-                                        <label for="cover">Alamat</label>
-                                            <input type="text "class="form-control" name="cover" id="cover" required/>
-                                        </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                    <button type="submit" class="btn btn-primary">Kirim</button>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                        <button type="submit" class="btn btn-primary">Kirim</button>
                                     </form>
                                 </div>
                             </div>
@@ -82,7 +77,7 @@
                         <th>Tanggal Lahir </th>
                         <th>Alamat</th>
                         <th>No Telp Pasien</th>
-                        <th>Gender </th>
+                        <th>Jenis Kelamin</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -127,29 +122,33 @@
                     <div class="row"> 
                         <div class="col-md-6"> 
                             <div class="form-group"> 
-                                <label for="edit-judul">Judul Buku</label> 
+                                <label for="edit-judul">Nama</label> 
                                 <input type="text" class="form-control" id="edit-judul" name="judul" required/>
                             </div> 
                             <div class="form-group">
-                                <label for="edit-penulis">Penulis</label> 
+                                <label for="edit-penulis">Umur</label> 
                                 <input type="text" class="form-control" name="penulis" id="edit-penulis" required/> 
                             </div> 
                             <div class="form-group"> 
-                                <label for="edit-tahun">Tahun</label> 
-                                <input type="year" class="form-control" name="tahun" id="edit-tahun" required/> 
+                                <label for="edit-tahun">Tanggal Lahir</label> 
+                                <input type="date" class="form-control" name="tahun" id="edit-tahun" required/> 
                             </div> 
-                            <div class="form-group"> 
-                                <label for="edit-penerbit">Penerbit</label> 
-                                <input type="text" class="form-control" name="penerbit" id="edit-penerbit" required/> 
+                            <div class="form-group">
+                            <label for="penulis">Alamat</label>
+                            <textarea type="text" class="form-control" name="description" value="{{}}"></textarea>
                             </div> 
-                        </div> 
-                        <div class="col-and-6"> 
-                            <div class="form-group" id="image-area"></div> 
-                            <div class="form-group"> 
-                                <label for="edit-cover">Cover</label> 
-                                <input type="file" class="form-control" name="cover" id="edit-cover"/> 
-                            </div> 
-                        </div> 
+                             <div class="form-group"> 
+                                <label for="edit-tahun">No Telp Pasien</label> 
+                                <input type="text" class="form-control" name="tahun" id="edit-tahun" required/> 
+                            </div>
+                            <div class="form-group">
+                                            <label for="tahun">Jenis Kelamin</label>
+                                                    <select name="province" class="form-control">
+                                                        <option value="">Pilih Jenis Kelamin....</option>
+                                                        <option value="">Laki - Laki</option>
+                                                        <option value="">Perempuan</option>
+                                                    </select>
+                                            </div> 
                     </div> 
                 </div> 
                 <div class="modal-footer"> 

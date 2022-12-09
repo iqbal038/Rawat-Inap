@@ -115,31 +115,31 @@
                     @method ('PATCH')
                     <div class="row"> 
                         <div class="col-md-6"> 
-                            <div class="form-group"> 
-                                <label for="edit-judul">Judul Buku</label> 
-                                <input type="text" class="form-control" id="edit-judul" name="judul" required/>
-                            </div> 
-                            <div class="form-group">
-                                <label for="edit-penulis">Penulis</label> 
-                                <input type="text" class="form-control" name="penulis" id="edit-penulis" required/> 
-                            </div> 
-                            <div class="form-group"> 
-                                <label for="edit-tahun">Tahun</label> 
-                                <input type="year" class="form-control" name="tahun" id="edit-tahun" required/> 
-                            </div> 
-                            <div class="form-group"> 
-                                <label for="edit-penerbit">Penerbit</label> 
-                                <input type="text" class="form-control" name="penerbit" id="edit-penerbit" required/> 
-                            </div> 
-                        </div> 
-                        <div class="col-and-6"> 
-                            <div class="form-group" id="image-area"></div> 
-                            <div class="form-group"> 
-                                <label for="edit-cover">Cover</label> 
-                                <input type="file" class="form-control" name="cover" id="edit-cover"/> 
-                            </div> 
-                        </div> 
-                    </div> 
+                        <div class="form-group">
+                                        <label for="penulis">Nama Kamar</label>
+                                            <input type="text"class="form-control" name="penulis" id="penulis" required/>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="penulis">No Kamar</label>
+                                            <input type="text"class="form-control" name="penulis" id="penulis" required/>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="tahun">Kode Kamar</label>
+                                        <select name="province" class="form-control">
+                                        <option value="">== Pilih Kelas ==</option>
+                                        <option value="">Kelas I</option>
+                                        <option value="">Kelas II</option>
+                                        <option value="">Kelas III</option>
+                                        <option value="">VIP</option>
+                                        </select></div>
+                                        <div class="form-group">
+                                        <label for="tahun">Status</label>
+                                        <select name="province" class="form-control">
+                                        <option value="">== Pilih Status ==</option>
+                                        <option value="">Sudah Terisi</option>
+                                        <option value="">Kosong</option>
+                                        </select></div>
+                                    </div>
                 </div> 
                 <div class="modal-footer"> 
                     <input type="hidden" name="id" id="edit-id"/> 
