@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -25,4 +25,42 @@ Auth::routes();
 
 Route::get('/home', function() {
     return view('home');
+})->name('home')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', function() {
+    return view('home');
+})->name('home')->middleware('auth');
+
+Route::get('/home/pasien', function (){
+    return view ('pasien');
+})->name('home')->middleware('auth');
+
+Route::get('/home/spesialis', function (){
+    return view ('spesialis');
+})->name('home')->middleware('auth');
+
+Route::get('/home/kamar', function (){
+    return view ('kamar');
+})->name('home')->middleware('auth');
+
+Route::get('/home/dokter', function (){
+    return view ('dokter');
+})->name('home')->middleware('auth');
+
+Route::get('/home/pendaftaran', function (){
+    return view ('pendaftaran');
+})->name('home')->middleware('auth');
+Route::get('/home/periksa', function (){
+    return view ('periksa');
+})->name('home')->middleware('auth');
+Route::get('/home/rawat', function (){
+    return view ('rawat');
+})->name('home')->middleware('auth');
+Route::get('/home/pembayaran', function (){
+    return view ('pembayaran');
+})->name('home')->middleware('auth');
+Route::get('/home/laporan', function (){
+    return view ('laporan');
 })->name('home')->middleware('auth');

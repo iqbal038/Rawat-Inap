@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Rawat IhNap',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Rumah Sakit Vol2</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -292,9 +292,24 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
+            'type' => 'sidebar-menu-search',
+            'text' => 'search',
+        ],
+        [   'text'         => 'Pasien',
+            'url'         => 'home/pasien',
+            'icon' => 'fas fa-fw fa-hospital-user',
+        ],
+        [   'text'         => 'Spesialis',
+            'url'         => 'home/spesialis',
+            'icon' => 'fas fa-fw fa-heart',
+        ],
+        [   'text'         => 'Kamar',
+            'url'         => 'home/kamar',
+            'icon' => 'fas fa-fw fa-bed',
+        ],
+        [   'text'         => 'Dokter',
+            'url'         => 'home/dokter',
+            'icon' => 'fas fa-fw fa-user-md',
         ],
         [
             'type'         => 'fullscreen-widget',
@@ -302,86 +317,39 @@ return [
         ],
 
         // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
+       
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+
+        ['header' => 'DATA TRANSAKSI'],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Pendaftaran',
+            'url'  => 'home/pendaftaran',
+            'icon' => 'fas fa-fw fa-address-card',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Hasil Periksa',
+            'url'  => 'home/periksa',
+            'icon' => 'fas fa-fw fa-clipboard-check',
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text' => 'Rawat',
+            'url'  => 'home/rawat',
+            'icon' => 'fas fa-fw fa-bed',
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'text' => 'Pembayaran',
+            'url'  => 'home/pembayaran',
+            'icon' => 'fas fa-fw fa-credit-card',
         ],
+        ['header' => 'DATA LAPORAN '],
         [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text' => 'Laporan Data Master',
+            'url'  => 'home/laporan',
+            'icon' => 'fas fa-fw fa-credit-card',
         ],
     ],
 
