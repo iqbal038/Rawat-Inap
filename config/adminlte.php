@@ -348,7 +348,7 @@ return [
         ['header' => 'DATA LAPORAN '],
         [
             'text' => 'Laporan Data Master',
-            'url'  => 'home/laporan',
+            'url'  => 'admin/laporan',
             'icon' => 'fas fa-fw fa-credit-card',
         ],
     ],
