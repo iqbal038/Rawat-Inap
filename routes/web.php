@@ -17,13 +17,24 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('auth.login');
 });
+
 Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 
 Route::get('admin/home', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.home')->middleware('is_admin');
 
+Route::get('admin/pasien', [App\Http\Controllers\AdminController::class, 'pasien'])->name('admin.pasien')->middleware('is_admin');
 
+Route::get('/home', function() {
+    return view('home');
+})->name('home')->middleware('auth');
+
+Route::get('/home', function() {
+    return view('home');
+})->name('home')->middleware('auth');
 
 Route::get('/home/pasien', function (){
     return view ('pasien');
@@ -59,4 +70,5 @@ Route::get('/home/pembayaran', function (){
 
 Route::get('/home/laporan', function (){
     return view ('laporan');
-})->name('admin.home')->middleware('auth');
+})->name('home')->middleware('auth');
+
