@@ -72,6 +72,7 @@
         <link rel="manifest" crossorigin="use-credentials" href="{{ asset('favicons/manifest.json') }}">
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="{{ asset('favicon/ms-icon-144x144.png') }}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     @endif
 
 </head>
@@ -106,6 +107,71 @@
 
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
+
+    <script>
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+        })
+        @if (Session::has('message'))
+            var type = "{{Session::get('alert-type')}}";
+            switch (type) {
+                case 'info':
+                    Toast.fire({
+                        type: 'info',
+                        title: "{{Session::get('message')}}"
+                    })
+                    break;
+                        case 'success':
+                            Toast.fire({
+                                type: 'success',
+                                title: "{{Session::get('message')}}"
+                    })
+                    break;
+                        case 'warning':
+                            Toast.fire({
+                                type: 'warning',
+                                title: "{{Session::get('message')}}"
+                    })
+                    break;
+                        case 'error':
+                            Toast.fire({
+                                type: 'error',
+                                title: "{{Session::get('message')}}"
+                    })
+                    break;
+                        case 'dialog_error':
+                            Swal.fire({
+                                type: 'error',
+                                title: "Oooopss",
+                                text: "{{Session::get('message')}}",
+                                timer: 3000
+                     })
+                     break;
+            }
+        @endif
+        @if ($errors->any())
+            @foreach($errors->all() as $error)
+                Swal.fire({
+                    type: 'error',
+                    title: "Ooopss",
+                    text: "{{ $error }}",
+                })
+                @endforeach
+        @endif
+        @if ($errors->any())
+                Swal.fire({
+                    icon: 'error',
+                    title: "Ooopss",
+                    text: "Terjadi suatu kesalahan",
+                })
+        @endif
+        $('#table-data').DataTable();
+        let baseurl = "<?=url('/')?>";
+        let fullURL = "<?=url()->full()?>";
+    </script>
 
 </body>
 

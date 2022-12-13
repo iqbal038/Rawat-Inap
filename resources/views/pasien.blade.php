@@ -10,13 +10,13 @@
 <div class="container-fluid">
     <div class="card card-default">
         <div class="card-body">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#tambahBukuModal">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#tambahPasienModal">
                 <i class="fa fa-plus">  Tambah Data</i>
             </button>
             <hr>
             <table id="table-data" class="table table-bordered">
                 <thead>
-                    <div class="modal fade" id="tambahBukuModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="tambahPasienModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -26,7 +26,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form method="post" enctype="multipart/form-data">
+                                    <form method="post" action="{{ route('admin.pasiens.submit') }}" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
                                         <label for="penulis">Nama Pasien</label>
@@ -83,13 +83,19 @@
                 </thead>
                 <tbody>
                     <tr>
-                            <td></td> 
-                            <td></td> 
-                            <td></td> 
-                            <td></td> 
-                            <td></td> 
-                            <td></td> 
-                            <td></td> 
+                        @php $no=1; @endphp
+                        @foreach($pasiens as $pasien)
+                        <tr>
+                            <td>{{$no++}}</td>
+                            <td>{{$pasien->$nama_pasien}}</td>
+                            <td>{{$pasien->$umur_pasien}}</td>
+                            <td>{{$pasien->$tgl_pasien}}</td>
+                            <td>{{$pasien->$alamat_pasien}}</td>
+                            <td>{{$pasien->$no_tlp}}</td>
+                            <td>{{$pasien->$jenis_kelamin_p}}</td>
+                            <td></td>
+                        </tr>
+                        @endforeach
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example"> 
                                     <button type="button" id="btn-edit-buku" class="btn btn-success" data-toggle="modal" data-target="#editBukuModal">
