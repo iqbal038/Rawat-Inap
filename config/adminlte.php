@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Rawat IhNap',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Rumah Sakit Vol2</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -292,9 +292,28 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
+            'type' => 'sidebar-menu-search',
+            'text' => 'search',
+        ],
+        [   'text'         => 'Pasien',
+            'url'         => 'admin/pasien',
+            'icon' => 'fas fa-fw fa-hospital-user',
+            'can' => 'isUser',
+        ],
+        [   'text'         => 'Spesialis',
+            'url'         => 'admin/spesialis',
+            'icon' => 'fas fa-fw fa-heart',
+            'can' => 'isUser',
+        ],
+        [   'text'         => 'Kamar',
+            'url'         => 'admin/kamar',
+            'icon' => 'fas fa-fw fa-bed',
+            'can' => 'isUser',
+        ],
+        [   'text'         => 'Dokter',
+            'url'         => 'admin/dokter',
+            'icon' => 'fas fa-fw fa-user-md',
+            'can' => 'isUser',
         ],
         [
             'type'         => 'fullscreen-widget',
@@ -302,86 +321,45 @@ return [
         ],
 
         // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
+       
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
+            'can' => 'isUser',
+        ],
+
+        ['header' => 'DATA TRANSAKSI', 'can' => 'isUser',],
+        [
+            'text' => 'Pendaftaran',
+            'url'  => 'admin/pendaftaran',
+            'icon' => 'fas fa-fw fa-address-card',
+            'can' => 'isUser',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Hasil Periksa',
+            'url'  => 'admin/periksa',
+            'icon' => 'fas fa-fw fa-clipboard-check',
+            'can' => 'isUser',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Rawat',
+            'url'  => 'admin/rawat',
+            'icon' => 'fas fa-fw fa-bed',
+            'can' => 'isUser',
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
+            'text' => 'Pembayaran',
+            'url'  => 'admin/pembayaran',
+            'icon' => 'fas fa-fw fa-credit-card',
+            'can' => 'isUser',
         ],
-        ['header' => 'labels'],
+        ['header' => 'DATA LAPORAN ', 'can' => 'isAdmin',],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text' => 'Laporan Data Master',
+            'url'  => 'admin/laporan',
+            'icon' => 'fas fa-fw fa-credit-card',
+            'can' => 'isAdmin',
         ],
     ],
 
